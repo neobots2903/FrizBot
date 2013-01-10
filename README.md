@@ -1,4 +1,4 @@
-![alt text](http://i48.tinypic.com/jpkakz_th.png "NeoBot's Logo")
+[![alt text](http://i48.tinypic.com/jpkakz_th.png "NeoBot's Logo")](http://neobots2903.org/)
 # The FrizBot
 ***
 **NeoBot's** (FRC Team 2903) Robot code.
