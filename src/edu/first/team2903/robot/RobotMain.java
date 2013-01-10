@@ -8,12 +8,12 @@
 package edu.first.team2903.robot;
 
 
+import edu.first.team2903.robot.commands.AutoMode1;
+import edu.first.team2903.robot.commands.CommandBase;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
-import edu.first.team2903.robot.commands.CommandBase;
-import edu.first.team2903.robot.commands.AutoMode1;
 
 /**
  * The VM is configured to automatically run this class, and to call the
