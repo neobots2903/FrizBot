@@ -6,6 +6,7 @@
 **Anchors**   
   * [Top](#Top)   
   * [Team Members](#programming-team-members)
+  * [Links](#links)
 
 ##  **Programming Team Members:**
 
@@ -18,7 +19,12 @@
    * **Connor Tilley**
    * **Josh Brantner**
 
+## **Links:**
+
+   * [FrizBot wiki] (https://github.com/neobots2903/FrizBot/wiki)
+
    
 **Anchors**   
   * [Top](#Top)   
   * [Team Members](#programming-team-members)
+  * [Links](#links)
