@@ -10,6 +10,7 @@ package edu.first.team2903.robot;
 
 import edu.first.team2903.robot.commands.AutoMode1;
 import edu.first.team2903.robot.commands.CommandBase;
+import edu.first.team2903.robot.commands.TeleopMode;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
@@ -25,6 +26,7 @@ import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 public class RobotMain extends IterativeRobot {
 
     Command autonomousCommand;
+    Command teleopCommand;
 
     /**
      * This function is run when the robot is first started up and should be
@@ -33,6 +35,7 @@ public class RobotMain extends IterativeRobot {
     public void robotInit() {
         // instantiate the command used for the autonomous period
         autonomousCommand = new AutoMode1();
+        teleopCommand = new TeleopMode();
 
         // Initialize all subsystems
         CommandBase.init();
@@ -56,6 +59,7 @@ public class RobotMain extends IterativeRobot {
         // continue until interrupted by another command, remove
         // this line or comment it out.
         autonomousCommand.cancel();
+        teleopCommand.start();
     }
 
     /**
