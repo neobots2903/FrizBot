@@ -6,6 +6,7 @@ public class TeleopMode extends CommandBase {
 
     public TeleopMode() {
         requires(drivetrain);
+        requires(shooter);
     }
 
     protected void initialize() {
@@ -13,6 +14,7 @@ public class TeleopMode extends CommandBase {
     }
 
     protected void execute() {
+        
         drivetrain.drive(OI.leftStick.getY(), OI.rightStick.getY());
         
     }
