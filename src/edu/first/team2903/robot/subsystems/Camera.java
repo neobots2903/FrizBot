@@ -78,12 +78,6 @@ public class Camera  extends Subsystem {
     public CamData getCamData() {
         CamData data = null;
         try {
-            /**
-             * Do the image capture with the camera and apply the algorithm described above. This
-             * sample will either get images from the camera or from an image file stored in the top
-             * level directory in the flash memory on the cRIO. The file name in this case is "testImage.jpg"
-             * 
-             */
             data = new CamData();
             ColorImage image = camera.getImage();     // comment if using stored images
             //ColorImage image;                           // next 2 lines read image from flash on cRIO
