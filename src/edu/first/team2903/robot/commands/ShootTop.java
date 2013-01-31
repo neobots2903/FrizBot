@@ -44,7 +44,7 @@ public class ShootTop extends CommandBase{
                         double targetrpm = 9001;
                         while(fired == false) {
                         if(rpm > (targetrpm - 15)&& rpm < (targetrpm +15)){
-                            //make it fHIER!(need to make whatever pushes the frisbee power on.)
+                            //make it fHIER!(need to make frisbeePusher power on.)
                             fired = true;
                         }
                         }

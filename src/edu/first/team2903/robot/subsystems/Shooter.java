@@ -7,6 +7,7 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 public class Shooter extends Subsystem {
 
     Jaguar shooterWheel = new Jaguar (RobotMap.shooterWheel);
+    Jaguar frisbeePusher = new Jaguar (RobotMap.shooterWheel);
             
     protected void initDefaultCommand() {
     }
