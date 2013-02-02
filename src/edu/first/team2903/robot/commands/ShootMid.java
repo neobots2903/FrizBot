@@ -6,9 +6,9 @@ import edu.first.team2903.robot.PerodicDataFactory;
 import edu.wpi.first.wpilibj.image.NIVisionException;
 import edu.wpi.first.wpilibj.networktables2.thread.PeriodicRunnable;
 
-public class ShootTop extends CommandBase{
+public class ShootMid extends CommandBase{
 
-    public ShootTop() {
+    public ShootMid() {
     requires(shooter);
     requires(camera);
     }
@@ -36,9 +36,9 @@ public class ShootTop extends CommandBase{
             *Stop Running command
             *print error message to driver station(DISK NOT LOADED!) */
                 //if(diskLoaded = true) {
-                  double topDistance = camera.computeTopDistance();
-                    if(topDistance == -1) {
-                        System.out.println("No top target detected.");
+                  double midDistance = camera.computeMidDistance();
+                    if(midDistance == -1) {
+                        System.out.println("No mid target detected.");
                     }
                     else {
                         double rpm = PerodicDataFactory.getInstance().getRPM();

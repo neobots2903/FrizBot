@@ -6,8 +6,8 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 
 public class Drivetrain extends Subsystem {
 
-    Jaguar rightMotor = new Jaguar(RobotMap.rightMotor);
-    Jaguar leftMotor = new Jaguar(RobotMap.leftMotor);
+    public Jaguar rightMotor = new Jaguar(RobotMap.rightMotor);
+    public Jaguar leftMotor = new Jaguar(RobotMap.leftMotor);
     
     
     protected void initDefaultCommand() {

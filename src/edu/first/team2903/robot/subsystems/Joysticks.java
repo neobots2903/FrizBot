@@ -7,8 +7,8 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 
 public class Joysticks extends Subsystem {
 
-    Joystick leftJoy = new Joystick(1);
-    Joystick rightJoy = new Joystick(2);
+    public Joystick leftJoy = new Joystick(1);
+    public Joystick rightJoy = new Joystick(2);
     
     
     protected void initDefaultCommand() {
