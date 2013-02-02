@@ -42,7 +42,8 @@ public class ShootTop extends CommandBase{
                     }
                     else {
                         double rpm = PerodicDataFactory.getInstance().getRPM();
-                        double targetrpm = 9001;
+                        double targetrpm = 500;
+                        //targetrpm not correct
                         while(fired == false) {
                         if(rpm > (targetrpm - 15)&& rpm < (targetrpm +15)){
                             //make it fHIER!(need to make frisbeePusher power on.)
