@@ -17,15 +17,18 @@ public class Drive extends CommandBase{
     }
 
     protected void execute() {// v Ghetto code v
-        if (joysticks.leftJoy.getY() > 0) {
+        if (joysticks.leftJoy.getY() > 0 && joysticks.rightJoy.getY()>0) {
 	                drivetrain.leftMotor.set(joysticks.leftJoy.getY());
-	                drivetrain.rightMotor.set(-joysticks.rightJoy.getY());
+	                drivetrain.rightMotor.set(joysticks.rightJoy.getY());
 	}
         else {
 	                drivetrain.leftMotor.set(joysticks.leftJoy.getY());
-	                drivetrain.rightMotor.set(-joysticks.leftJoy.getY());
+	                drivetrain.rightMotor.set(joysticks.leftJoy.getY());
         }
+     
+    
     }
+    
     
     protected boolean isFinished() {
     return false;
