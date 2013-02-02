@@ -4,6 +4,7 @@ import edu.first.team2903.robot.OI;
 import edu.first.team2903.robot.subsystems.Camera;
 import edu.first.team2903.robot.subsystems.Drivetrain;
 import edu.first.team2903.robot.subsystems.Encoders;
+import edu.first.team2903.robot.subsystems.Joysticks;
 import edu.first.team2903.robot.subsystems.Shooter;
 import edu.wpi.first.wpilibj.command.Command;
 
@@ -18,6 +19,7 @@ public abstract class CommandBase extends Command {
     public static OI oi;
     
     // --- SUBSYSTEMS BEGIN ---
+    public static Joysticks joysticks = new Joysticks();
     public static Drivetrain drivetrain = new Drivetrain();
     public static Camera camera = new Camera();
     public static Shooter shooter = new Shooter();
