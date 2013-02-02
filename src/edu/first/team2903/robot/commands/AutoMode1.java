@@ -1,4 +1,5 @@
 package edu.first.team2903.robot.commands;
+import edu.first.team2903.robot.subsystems.Shooter;
 
 public class AutoMode1 extends CommandBase {
 
@@ -14,6 +15,13 @@ public class AutoMode1 extends CommandBase {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
+        //Shoot three disks
+        drivetrain.leftMotor.set(-1);
+        drivetrain.rightMotor.set(-1);
+        //Finish that code to back up 9 feet
+        drivetrain.leftMotor.set(1);
+        drivetrain.rightMotor.set(-1);
+        //finish that code to turn 180
         drivetrain.drive(5, 5);     
         try {
             Thread.sleep(500);
@@ -38,3 +46,7 @@ public class AutoMode1 extends CommandBase {
     protected void interrupted() {
     }
 }
+
+//shoot 3 disks
+//back up X feet
+//spin 180 deg
