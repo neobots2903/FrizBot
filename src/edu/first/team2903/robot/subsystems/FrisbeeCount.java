@@ -10,7 +10,6 @@ package edu.first.team2903.robot.subsystems;
  */
 public class FrisbeeCount {
     
-    //if (FCsensor1 = true) {frisbeeCount++}
-    // if (FCsensor2 = true) {frisbeeCount--}
+
     
 }
