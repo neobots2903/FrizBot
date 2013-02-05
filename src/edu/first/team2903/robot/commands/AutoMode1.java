@@ -18,8 +18,7 @@ public class AutoMode1 extends CommandBase {
         drivetrain.drive(-1, -1);
         //TODO Finish that code to back up 9 feet
         drivetrain.drive(1, -1);
-        //Todo finish that code to turn 180
-        drivetrain.drive(1, 1);     
+        //Todo finish that code to turn 180   
         try {
             Thread.sleep(500);
         } catch (InterruptedException ex) {
