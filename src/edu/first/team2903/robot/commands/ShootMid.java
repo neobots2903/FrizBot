@@ -47,6 +47,11 @@ public class ShootMid extends CommandBase{
                         while(fired == false) {
                         if(rpm > (targetrpm - 15)&& rpm < (targetrpm +15)){
                             //make it fHIER!(need to make frisbeePusher power on.)
+                           //set the pusher to default if it isn't already.
+                            shooter.setPusher(false);
+                            shooter.setPusher(true);
+                            shooter.setPusher(false);
+                            //need to see if it does the full 90 degree turn before returning.
                             fired = true;
                         }
                         }
