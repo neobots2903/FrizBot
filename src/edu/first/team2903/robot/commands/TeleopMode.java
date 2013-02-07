@@ -3,7 +3,8 @@ package edu.first.team2903.robot.commands;
 import edu.first.team2903.robot.OI;
 
 public class TeleopMode extends CommandBase {
-
+    
+    
     public TeleopMode() {
         requires(drivetrain);
         requires(shooter);
@@ -14,7 +15,9 @@ public class TeleopMode extends CommandBase {
     }
 
     protected void execute() {
-        
+        if (OI.rightStick.getZ() > 0) {
+            shooter.Shoot(OI.rightStick.getZ());
+        }
         drivetrain.drive(OI.leftStick.getY(), OI.rightStick.getY());
         
     }
