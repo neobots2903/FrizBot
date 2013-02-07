@@ -15,8 +15,9 @@ public class TeleopMode extends CommandBase {
     }
 
     protected void execute() {
+        //DEBUG REMOVE LATER
         if (OI.rightStick.getZ() > 0) {
-            shooter.Shoot(OI.rightStick.getZ());
+            shooter.setSpeed(OI.rightStick.getZ());
         }
         drivetrain.drive(OI.leftStick.getY(), OI.rightStick.getY());
         
