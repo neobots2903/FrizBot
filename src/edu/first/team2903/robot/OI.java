@@ -2,6 +2,8 @@
 package edu.first.team2903.robot;
 
 import edu.wpi.first.wpilibj.Joystick;
+import edu.wpi.first.wpilibj.buttons.Button;
+import edu.wpi.first.wpilibj.buttons.JoystickButton;
 
 
 /**
@@ -18,7 +20,8 @@ public class OI {
 
     public static Joystick leftStick = new Joystick(0);
     public static Joystick rightStick = new Joystick(1);
-
+    public static Button triggerButton = new JoystickButton(rightStick,5);
+    
     // Another type of button you can create is a DigitalIOButton, which is
     // a button or switch hooked up to the cypress module. These are useful if
     // you want to build a customized operator interface.

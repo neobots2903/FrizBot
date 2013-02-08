@@ -15,7 +15,11 @@ public class TeleopMode extends CommandBase {
     }
 
     protected void execute() {
+        boolean state = true;
         //DEBUG REMOVE LATER
+        //Can't figure out how to turn setPusher to true to activate the 
+        //frisbee into the shooter area. Set to button 5 in OI.java
+
         if (OI.rightStick.getZ() > 0) {
             shooter.setSpeed(OI.rightStick.getZ());
         }
