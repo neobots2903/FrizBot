@@ -18,9 +18,11 @@ public class OI {
     // Joystick stick = new Joystick(port);
     // Button button = new JoystickButton(stick, buttonNumber);
 
-    public static Joystick leftStick = new Joystick(0);
-    public static Joystick rightStick = new Joystick(1);
+    public static Joystick leftStick = new Joystick(1);
+    public static Joystick rightStick = new Joystick(2);
     public static Button triggerButton = new JoystickButton(rightStick,5);
+    
+    
     
     // Another type of button you can create is a DigitalIOButton, which is
     // a button or switch hooked up to the cypress module. These are useful if
