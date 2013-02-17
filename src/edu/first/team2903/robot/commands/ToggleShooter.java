@@ -22,12 +22,12 @@ public class ToggleShooter extends CommandBase {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-        if(shooter.getPusherState()) {
-            shooter.setPusher(false);
-        } else {
-            shooter.setPusher(true);
-        }
-        done = true;
+     //   if(shooter.getPusherState()==true) {
+       //     shooter.setPusher(false);
+        //} else {
+          //  shooter.setPusher(true);
+        //}
+       // done = true;
     }
 
     // Make this return true when this Command no longer needs to run execute()

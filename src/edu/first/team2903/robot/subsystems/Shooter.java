@@ -9,7 +9,7 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 public class Shooter extends Subsystem {
 
     Victor shooterWheel = new Victor(RobotMap.shooterWheel);
-    Servo frisbeePusher = new Servo(RobotMap.frisbeePusher);
+    //Servo frisbeePusher = new Servo(RobotMap.frisbeePusher);
             
     protected void initDefaultCommand() {
     }
@@ -20,18 +20,18 @@ public class Shooter extends Subsystem {
     
     public void setPusher(boolean state) {
         if(state == true){ 
-            frisbeePusher.setAngle(90); 
+           // frisbeePusher.setAngle(180); 
         }
         if(state == false) {
-            frisbeePusher.setAngle(0);
+            //frisbeePusher.setAngle(90);
         }
     }
     
-    public boolean getPusherState() {
-        if(frisbeePusher.getAngle() == 90) {
-            return true;
-        } else {
-            return false;
-        }
-    }
+  //  public boolean getPusherState() {
+       // if(frisbeePusher.getAngle() == 180) {
+         //   return true;
+       // } else {
+         //   return false;
+       // }
+   // }
 }

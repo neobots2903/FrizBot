@@ -39,7 +39,7 @@ public class Camera  extends Subsystem {
     CriteriaCollection cc;      // the criteria for doing the particle filter operation
         
     public Camera() {
-        camera = AxisCamera.getInstance();  // get an instance of the camera
+        camera =null;  // get an instance of the camera
         cc = new CriteriaCollection();      // create the criteria for the particle filter
         cc.addCriteria(NIVision.MeasurementType.IMAQ_MT_AREA, 500, 65535, false);
     }

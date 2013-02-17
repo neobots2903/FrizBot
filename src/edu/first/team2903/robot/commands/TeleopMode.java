@@ -1,9 +1,12 @@
 package edu.first.team2903.robot.commands;
+import edu.first.team2903.robot.RobotMap;
 
 import edu.first.team2903.robot.OI;
+import edu.wpi.first.wpilibj.Servo;
 
 public class TeleopMode extends CommandBase {
     
+    Servo frisbeePusher = new Servo(RobotMap.frisbeePusher);
     
     public TeleopMode() {
         requires(drivetrain);
@@ -11,7 +14,7 @@ public class TeleopMode extends CommandBase {
     }
 
     protected void initialize() {
-       //Todo, spindown code
+       //Todo, spindown code 
     }
 
     protected void execute() {
@@ -19,13 +22,32 @@ public class TeleopMode extends CommandBase {
         
         //Can't figure out how to turn setPusher to true to activate the 
         //frisbee into the shooter area. Set to button 5 in OI.java
-        OI.triggerButton.whenPressed(new ToggleShooter());
+        //OI.triggerButton.whenPressed(new ToggleShooter());
         if (OI.rightStick.getZ() <0) {
-            shooter.setSpeed(OI.rightStick.getZ());
+            shooter.setSpeed(OI.rightStick.getZ() * 2);
         }
         else {
             shooter.setSpeed(0);
         }
+        
+        
+        //smart shooter
+        if(OI.rightStick.getRawButton(1)){
+            frisbeePusher.setAngle(170);
+           } 
+        else {
+            frisbeePusher.setAngle(5);
+           }
+        
+        
+        
+        
+        if (OI.rightStick.getRawButton(5)){
+            frisbeePusher.setAngle(170);
+           } 
+        else {
+            frisbeePusher.setAngle(5);
+           }
         
         drivetrain.drive(OI.leftStick.getY(), OI.rightStick.getY());
         
@@ -44,3 +66,4 @@ public class TeleopMode extends CommandBase {
     
     
 }
+     
