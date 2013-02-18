@@ -24,12 +24,18 @@ public class AutoMode1 extends CommandBase {
     protected void execute() {
         //TODO Shoot three disks
         while (done == false) {
-            shooter.setSpeed(2);
+            shooter.setSpeed(.75);
             try {
                 Thread.sleep(3000);
+                shooter.shoot();
+                Thread.sleep(2000);
+                shooter.shoot();
+                Thread.sleep(2000);
+                shooter.shoot();
             } catch (InterruptedException ex) {
                 ex.printStackTrace();
             }
+            
             
             drivetrain.drive(-1, -1);
             //TODO Finish that code to back up 9 feet
