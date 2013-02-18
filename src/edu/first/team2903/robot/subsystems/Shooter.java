@@ -10,28 +10,31 @@ public class Shooter extends Subsystem {
 
     Victor shooterWheel = new Victor(RobotMap.shooterWheel);
     //Servo frisbeePusher = new Servo(RobotMap.frisbeePusher);
-            
+
     protected void initDefaultCommand() {
     }
-    
+
     public void setSpeed(double speed) {
         shooterWheel.set(speed);
     }
-    
+
     public void setPusher(boolean state) {
-        if(state == true){ 
-           // frisbeePusher.setAngle(180); 
+        if (state == true) {
+            // frisbeePusher.setAngle(180); 
         }
-        if(state == false) {
+        if (state == false) {
             //frisbeePusher.setAngle(90);
         }
     }
-    
-  //  public boolean getPusherState() {
-       // if(frisbeePusher.getAngle() == 180) {
-         //   return true;
-       // } else {
-         //   return false;
-       // }
-   // }
+
+    public void shoot() {
+        
+    }
+    //  public boolean getPusherState() {
+    // if(frisbeePusher.getAngle() == 180) {
+    //   return true;
+    // } else {
+    //   return false;
+    // }
+    // }
 }

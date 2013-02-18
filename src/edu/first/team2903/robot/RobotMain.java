@@ -33,6 +33,7 @@ public class RobotMain extends IterativeRobot {
      * used for any initialization code.
      */
     public void robotInit() {
+        System.out.println ("Robot code is running.");
         // instantiate the command used for the autonomous period
         autonomousCommand = new AutoMode1();
         teleopCommand = new TeleopMode();
