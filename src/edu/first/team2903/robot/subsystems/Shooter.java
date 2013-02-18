@@ -9,6 +9,8 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 public class Shooter extends Subsystem {
 
     Victor shooterWheel = new Victor(RobotMap.shooterWheel);
+    Servo frisbeePusher = new Servo(RobotMap.frisbeePusher);
+    Servo diskDrop = new Servo(RobotMap.diskDrop);
     //Servo frisbeePusher = new Servo(RobotMap.frisbeePusher);
 
     protected void initDefaultCommand() {
@@ -27,8 +29,14 @@ public class Shooter extends Subsystem {
         }
     }
 
-    public void shoot() {
-        
+    public void shoot() throws InterruptedException {
+        frisbeePusher.setAngle(170);
+        diskDrop.setAngle(90);
+        Thread.sleep(100);
+        diskDrop.setAngle(0);
+        frisbeePusher.setAngle(90);
+        Thread.sleep(100);
+        frisbeePusher.setAngle(170);
     }
     //  public boolean getPusherState() {
     // if(frisbeePusher.getAngle() == 180) {
