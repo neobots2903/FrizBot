@@ -1,9 +1,7 @@
 package edu.first.team2903.robot.commands;
 
 import edu.first.team2903.robot.OI;
-import edu.first.team2903.robot.subsystems.Camera;
 import edu.first.team2903.robot.subsystems.Drivetrain;
-import edu.first.team2903.robot.subsystems.Encoders;
 import edu.first.team2903.robot.subsystems.Shooter;
 import edu.wpi.first.wpilibj.command.Command;
 
@@ -19,9 +17,7 @@ public abstract class CommandBase extends Command {
     
     // --- SUBSYSTEMS BEGIN ---
     public static Drivetrain drivetrain = new Drivetrain();
-    public static Camera camera = new Camera();
     public static Shooter shooter = new Shooter();
-    public static Encoders encoders = new Encoders();
     // --- SUBSYSTEMS END
 
     public static void init() {
