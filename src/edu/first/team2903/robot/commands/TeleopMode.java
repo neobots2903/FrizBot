@@ -1,9 +1,7 @@
 package edu.first.team2903.robot.commands;
 
-import edu.first.team2903.robot.RobotMap;
-
 import edu.first.team2903.robot.OI;
-import edu.wpi.first.wpilibj.Servo;
+import java.util.Random;
 
 public class TeleopMode extends CommandBase {
 
@@ -38,7 +36,8 @@ public class TeleopMode extends CommandBase {
             try {
                 shooter.shoot();
             } catch (InterruptedException ex) {
-                ex.printStackTrace();
+                System.out.println("EXCEPTION OCCURED?!");
+                System.out.println("Today's Execption Occured Lotto Winner: "+new Random().nextInt());
             }
         }
 
