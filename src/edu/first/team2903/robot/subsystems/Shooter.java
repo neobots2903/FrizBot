@@ -1,16 +1,15 @@
 package edu.first.team2903.robot.subsystems;
 
 import edu.first.team2903.robot.RobotMap;
-import edu.wpi.first.wpilibj.Jaguar;
 import edu.wpi.first.wpilibj.Servo;
 import edu.wpi.first.wpilibj.Victor;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
 public class Shooter extends Subsystem {
 
-    Victor shooterWheel = new Victor(RobotMap.shooterWheel);
-    Servo frisbeePusher = new Servo(RobotMap.frisbeePusher);
-    Servo diskDrop = new Servo(RobotMap.diskDrop);
+    public Victor shooterWheel = new Victor(RobotMap.shooterWheel);
+    public Servo frisbeePusher = new Servo(RobotMap.frisbeePusher);
+    public Servo diskDrop = new Servo(RobotMap.diskDrop);
     //Servo frisbeePusher = new Servo(RobotMap.frisbeePusher);
 
     protected void initDefaultCommand() {
@@ -30,13 +29,13 @@ public class Shooter extends Subsystem {
     }
 
     public void shoot() throws InterruptedException {
-        frisbeePusher.setAngle(170);
-        diskDrop.setAngle(90);
-        Thread.sleep(100);
-        diskDrop.setAngle(0);
-        frisbeePusher.setAngle(90);
-        Thread.sleep(100);
-        frisbeePusher.setAngle(170);
+        frisbeePusher.setAngle(130); //Po
+        diskDrop.setAngle(90);       //Dd
+        Thread.sleep(1000);           //wait for disk to drop
+        diskDrop.setAngle(0);        //Du
+        frisbeePusher.setAngle(10);   //pusher in
+        Thread.sleep(1000);           //wait with pusher back
+        frisbeePusher.setAngle(130); //push frisbee out to fire
     }
     //  public boolean getPusherState() {
     // if(frisbeePusher.getAngle() == 180) {
