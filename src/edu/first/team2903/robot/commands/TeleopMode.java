@@ -41,6 +41,12 @@ public class TeleopMode extends CommandBase {
             }
         }
 
+        if(OI.scoreStick.getRawButton(2)) {
+            drivetrain.climb(OI.scoreStick.getY());
+        } else {
+            drivetrain.climb(0);
+        }
+        
         drivetrain.drive(OI.leftStick.getY(), OI.rightStick.getY());
 
     }

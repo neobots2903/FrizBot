@@ -14,8 +14,7 @@ public class RobotMap {
     public static final int leftMotor = 1;
     public static final int rightMotor = 2;
     public static final int shooterWheel = 3;//wheel that spins to shoot frisbees.
-    public static final int climbMotor1 = 4;
-    public static final int climbMotor2 = 5;
+    public static final int climbMotor = 4;
     public static final int frisbeePusher = 9;//pushes the frisbee into the shooterwheel.
     public static final int diskDrop = 10;//drops frisbees into position to be shot.
     
