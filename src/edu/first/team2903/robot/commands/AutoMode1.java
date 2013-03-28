@@ -1,7 +1,5 @@
 package edu.first.team2903.robot.commands;
 
-import edu.first.team2903.robot.RobotMap;
-import edu.wpi.first.wpilibj.Servo;
 import java.util.Random;
 
 public class AutoMode1 extends CommandBase {

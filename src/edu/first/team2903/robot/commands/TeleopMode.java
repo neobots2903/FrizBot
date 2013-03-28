@@ -13,7 +13,7 @@ public class TeleopMode extends CommandBase {
     }
 
     protected void initialize() {
-        shooter.frisbeePusher.setAngle(5);
+        shooter.frisbeePusher.setAngle(80);
         shooter.diskDrop.setAngle(0);
     }
 
@@ -24,15 +24,15 @@ public class TeleopMode extends CommandBase {
         //frisbee into the shooter area. Set to button 5 in OI.java
         //OI.triggerButton.whenPressed(new ToggleShooter());
         
-        if (OI.rightStick.getZ() < 0) {
-            shooter.setSpeed(-OI.rightStick.getZ() * 2);
+        if (OI.scoreStick.getZ() < 0) {
+            shooter.setSpeed(-OI.scoreStick.getZ() * 2);
         } else {
             shooter.setSpeed(0);
         }
 
 
         //smart shooter
-        if (OI.rightStick.getRawButton(1)) {
+        if (OI.scoreStick.getRawButton(1)) {
             try {
                 shooter.shoot();
             } catch (InterruptedException ex) {
