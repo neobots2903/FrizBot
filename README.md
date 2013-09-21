@@ -10,14 +10,10 @@
 
 ##  **Programming Team Members:**
 
-   * **Sean McClenaghan** (Programming Lead)
-   * **Zach Ensey** 
+   * **Gavin Britton** (Programming Lead)
    * **Geoff Root**
-   * **Geff Hederich**
-   * **Gavin Britton**
-   * **Isaac Wolfington**
    * **Connor Tilley**
-   * **Josh Brantner**
+   * **Andrew Bunham**
 
 ## **Links:**
 
