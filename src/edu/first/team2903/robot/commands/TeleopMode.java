@@ -1,10 +1,12 @@
 package edu.first.team2903.robot.commands;
 
 import edu.first.team2903.robot.OI;
+import edu.wpi.first.wpilibj.DriverStationLCD;
 import java.util.Random;
 
 public class TeleopMode extends CommandBase {
 
+    DriverStationLCD lcd = DriverStationLCD.getInstance();
     
 
     public TeleopMode() {
@@ -18,11 +20,8 @@ public class TeleopMode extends CommandBase {
     }
 
     protected void execute() {
-        boolean state = true;
+        //boolean state = true;
 
-        //Can't figure out how to turn setPusher to true to activate the 
-        //frisbee into the shooter area. Set to button 5 in OI.java
-        //OI.triggerButton.whenPressed(new ToggleShooter());
         
         if (OI.scoreStick.getZ() < 0) {
             shooter.setSpeed(-OI.scoreStick.getZ() * 2);
@@ -41,13 +40,20 @@ public class TeleopMode extends CommandBase {
             }
         }
 
-        if(OI.scoreStick.getRawButton(2)) {
-            drivetrain.climb(OI.scoreStick.getY());
+        if(OI.scoreStick.getRawButton(3)) {
+            drivetrain.drive(OI.leftStick.getY(), OI.rightStick.getY(), OI.scoreStick.getY());
         } else {
-            drivetrain.climb(0);
+            drivetrain.drive(OI.leftStick.getY(), OI.rightStick.getY(), 0);
         }
         
-        drivetrain.drive(OI.leftStick.getY(), OI.rightStick.getY());
+        if(OI.scoreStick.getRawButton(4)) {
+            shooter.setSpeed(1.0);
+        }
+
+        //System.out.println("Value: "+shooter.shooterWheel.getSpeed());
+        lcd.println(DriverStationLCD.Line.kUser2, 1, "Shooter Speed: "+shooter.shooterWheel.getSpeed());
+        lcd.println(DriverStationLCD.Line.kUser2, 2, "Z value: "+OI.scoreStick.getZ());
+        lcd.updateLCD();
 
     }
 

@@ -14,11 +14,11 @@ public class AutoMode1 extends CommandBase {
 
     // Called just before this Command runs the first time
     protected void initialize() {
-        shooter.frisbeePusher.setAngle(5);
+        shooter.frisbeePusher.setAngle(80);
         shooter.diskDrop.setAngle(0);
-        shooter.setSpeed(-.75);
+        shooter.setSpeed(1.0);
             try {
-                Thread.sleep(3000);
+                Thread.sleep(2000);
                 shooter.shoot();
                 Thread.sleep(2000);
                 shooter.shoot();
@@ -28,9 +28,9 @@ public class AutoMode1 extends CommandBase {
                 System.out.println("EXCEPTION OCCURED?!");
                 System.out.println("Today's Execption Occured Lotto Winner: "+new Random().nextInt());
             }  
-
+            shooter.setSpeed(0);
     }
-
+  
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
 
