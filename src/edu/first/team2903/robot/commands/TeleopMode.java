@@ -1,10 +1,12 @@
 package edu.first.team2903.robot.commands;
 
 import edu.first.team2903.robot.OI;
+import edu.wpi.first.wpilibj.DriverStationLCD;
 import java.util.Random;
 
 public class TeleopMode extends CommandBase {
 
+    DriverStationLCD lcd = DriverStationLCD.getInstance();
     
 
     public TeleopMode() {
@@ -13,27 +15,27 @@ public class TeleopMode extends CommandBase {
     }
 
     protected void initialize() {
-        shooter.frisbeePusher.setAngle(5);
+        shooter.frisbeePusher.setAngle(80);
         shooter.diskDrop.setAngle(0);
     }
 
     protected void execute() {
         //boolean state = true;
+<<<<<<< HEAD
         //commented out in an attempt to stop the acceleration bug
+=======
+>>>>>>> origin/CompFreeze
 
-        //Can't figure out how to turn setPusher to true to activate the 
-        //frisbee into the shooter area. Set to button 5 in OI.java
-        //OI.triggerButton.whenPressed(new ToggleShooter());
         
-        if (OI.rightStick.getZ() < 0) {
-            shooter.setSpeed(-OI.rightStick.getZ() * 2);
+        if (OI.scoreStick.getZ() < 0) {
+            shooter.setSpeed(-OI.scoreStick.getZ() * 2);
         } else {
             shooter.setSpeed(0);
         }
 
 
         //smart shooter
-        if (OI.rightStick.getRawButton(1)) {
+        if (OI.scoreStick.getRawButton(1)) {
             try {
                 shooter.shoot();
             } catch (InterruptedException ex) {
@@ -42,7 +44,20 @@ public class TeleopMode extends CommandBase {
             }
         }
 
-        drivetrain.drive(OI.leftStick.getY(), OI.rightStick.getY());
+        if(OI.scoreStick.getRawButton(3)) {
+            drivetrain.drive(OI.leftStick.getY(), OI.rightStick.getY(), OI.scoreStick.getY());
+        } else {
+            drivetrain.drive(OI.leftStick.getY(), OI.rightStick.getY(), 0);
+        }
+        
+        if(OI.scoreStick.getRawButton(4)) {
+            shooter.setSpeed(1.0);
+        }
+
+        //System.out.println("Value: "+shooter.shooterWheel.getSpeed());
+        lcd.println(DriverStationLCD.Line.kUser2, 1, "Shooter Speed: "+shooter.shooterWheel.getSpeed());
+        lcd.println(DriverStationLCD.Line.kUser2, 2, "Z value: "+OI.scoreStick.getZ());
+        lcd.updateLCD();
 
     }
 

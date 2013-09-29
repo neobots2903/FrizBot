@@ -20,7 +20,8 @@ public class OI {
 
     public static Joystick leftStick = new Joystick(1);
     public static Joystick rightStick = new Joystick(2);
-    public static Button triggerButton = new JoystickButton(rightStick,5);
+    public static Joystick scoreStick = new Joystick(3);
+    //public static Button triggerButton = new JoystickButton(rightStick,5);
     
     
     

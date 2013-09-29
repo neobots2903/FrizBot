@@ -11,8 +11,8 @@ public class RobotMap {
     // following variables to use with your drivetrain subsystem.
     // public static final int leftMotor = 1;
     // public static final int rightMotor = 2;
-    public static final int rightMotor = 2;
     public static final int leftMotor = 1;
+    public static final int rightMotor = 2;
     public static final int shooterWheel = 3;//wheel that spins to shoot frisbees.
     public static final int climbMotor1 = 4;
     public static final int climbMotor2 = 5;
