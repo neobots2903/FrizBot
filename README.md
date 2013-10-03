@@ -10,8 +10,8 @@
 
 ##  **Programming Team Members:**
 
-   * **Gavin Britton** (Programming Lead)
-   * **Geoff Root**
+   * **Geoff Root** (Programming Lead)
+   * **Gavin Britton** 
    * **Connor Tilley**
    * **Andrew Bunham**
 
