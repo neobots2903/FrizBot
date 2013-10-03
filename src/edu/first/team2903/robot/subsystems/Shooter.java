@@ -29,19 +29,9 @@ public class Shooter extends Subsystem {
     }
 
     public void shoot() throws InterruptedException {
-//        diskDrop.setAngle(0);        //Du
-//        Thread.sleep(1000);          // wait dumper
         frisbeePusher.setAngle(160); //Po - Maybe set to 175
         Thread.sleep(1500);           //wait for disk to shoot
         frisbeePusher.setAngle(80);   //pusher in
-//        diskDrop.setAngle(90);        //Dd
         Thread.sleep(1000);           //wait with pusher back
     }
-    //  public boolean getPusherState() {
-    // if(frisbeePusher.getAngle() == 180) {
-    //   return true;
-    // } else {
-    //   return false;
-    // }
-    // }
 }

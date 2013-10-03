@@ -21,10 +21,7 @@ public class TeleopMode extends CommandBase {
 
     protected void execute() {
         //boolean state = true;
-<<<<<<< HEAD
         //commented out in an attempt to stop the acceleration bug
-=======
->>>>>>> origin/CompFreeze
 
         
         if (OI.scoreStick.getZ() < 0) {
